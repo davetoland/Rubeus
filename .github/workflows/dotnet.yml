@@ -24,7 +24,9 @@ jobs:
       run: dotnet restore
     - name: Build
       run: dotnet build --no-restore
-    - name: Upload a Build Artifact
-      uses: actions/upload-artifact@v4.3.4
+    - name: Upload artifacts
+      uses: skx/github-action-publish-binaries@master
+      env:
+        GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
       with:
-        name: Rubeus
+        args: 'example-*'
