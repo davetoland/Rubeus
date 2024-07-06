@@ -28,4 +28,4 @@ jobs:
       uses: actions/upload-artifact@v4
       with:
         name: Rubeus-${{ matrix.dotnet-version }}
-        path: Releases-${{ matrix.dotnet-version }}
+        path: bin\Debug\Rubeus.exe
